@@ -1,17 +1,22 @@
 body{
     background-color: #ffffff;
+    padding: 0;
+    margin: 0 -10px;
 }
 .body{
     background-color: #ffffff;
     padding: 0;
     max-height: 100vh;
     width: 1440px;
+    margin: 0;
 }
+
+/* Signing page*/
 .signin-container{
     top: 0;
     left: 0;
     padding: 0;
-    width: 568px;
+    width: 500px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -21,30 +26,47 @@ body{
     margin: auto;
 }
 .form-container{
-width: 100%;
-background: rgba(230, 231, 235, 0.2);
-border-radius: 32px;
-padding: 62px 32px;
-box-sizing: border-box;
+   width: 100%;
+   background: rgba(230, 231, 235, 0.2);
+   border-radius: 32px;
+   padding: 24px 54px 48px 54px;
+   box-sizing: border-box;
+
 }
-form{
+.form-container h1{
+    font-size: 42px;
+    line-height: 42px;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    margin-bottom: 32px;
+}
+
+.form-container form{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 28px;
+    padding: 0;
 }
+
+.form-container form input{
+    width: 90%;
+}
+
 .form-input{
-width: 425px;
-background: #E6E7EB;
-border-radius: 12px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-color: #4C5564;
-padding: 14px 24px 14px 24px;
-outline: none;
-border: none;
+    background: #E6E7EB;
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #4C5564;
+    padding: 14px 24px 14px 24px;
+    outline: none;
+    border: none;
 }
 ::placeholder {
     font-family: 'Inter';
@@ -55,25 +77,330 @@ border: none;
 }
 
 .form-btn{
+    width: 100%;
+    height: 55px;
+    background: #030712;
+    border: 2px solid #030712;
+    border-radius: 32px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 12px 24px 12px 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+.return-link{   
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #030712;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:14px;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 32px;
+}
+.return-link:hover{
+    background: rgba(230, 231, 235, 0.2);
+}
 
-width: 202px;
-height: 55px;
-background: #030712;
-border: 2px solid #030712;
-border-radius: 32px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-color: #FFFFFF;
-padding: 12px 24px 12px 24px;
+/* --------------------------------------------------------------------------------------------- */
+
+/* Header */
+.header-container{
+    width: 80%;
+    margin: 20px auto;
+    min-height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between
+}
+.header-container img{
+    margin-left: -14px;
+}
+.header-container ul {
+    list-style-type: none;
+    width: 60%;
+    text-align: center;
+    padding: 0;
+}
+.header-container ul li{
+    float: left;
+    margin-left: 60px;
+}
+.header-container ul li:first-of-type{
+    float: left;
+    margin-left: 50px;
+}
+.header-btn{
+    background: #ffffff;
+    border:0.12em solid #030712;
+    border-radius: 32px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size:16px;
+    color: #030712;
+    padding: 4px 16px 4px 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:12px;
+    text-decoration: none;
+}
+.menu-link{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size:15px;
+    color: #030712;
+    text-decoration: none;
+    padding-bottom: 6px;  
+}
+.menu-link:hover{
+    border-bottom: 3px solid #030712;
+}
+
+.active{
+    border-bottom: 3px solid #030712;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* InnerPage HERO Section */
+.hero-section{
+    width:80%;
+    margin: 20px auto;
+    height: 360px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.hero-section h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 70px;
+    line-height: 100px;
+    text-transform: uppercase;
+    color: #AEB2BA;
 
 }
-.return-link{
+.content-section{
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+/* --------------------------------------------------------------------------------------------- */
+
+/* Content Section - Contact Page */
+.left-side{  
+    width: 432px;
+    height: 769px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-section{  
+    width: 100%;
+    height: 368px; 
+    background: rgba(230, 231, 235, 0.2);
+    border-radius: 32px;
+    padding: 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 42px;
+}
+
+.social-section{
+    width: 100%;
+    height: 336px;
+    background: rgba(230, 231, 235, 0.2);
+    border-radius: 32px;
+    padding: 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 42px;
+}
+.social-section h2{
+    width: 100%;
+}
+
+.contact-section{
+    width: 600px;
+    height: 769px;
+    background: rgba(230, 231, 235, 0.2);
+    border-radius: 32px;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.contact-section form{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 0;
+}
+
+.contact-section form input{
+    width: 36%;
+}
+
+.contact-section form textarea{
+    width: 100%;
+}
+
+.section-title{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 800;
+font-size: 24px;
+line-height: 24px;
+text-transform: uppercase;
+color: #AEB2BA;
+padding: 0;
+margin: 0;
+
+}
+.contact-title{
 font-family: 'Inter';
 font-style: normal;
 font-weight: 600;
-font-size: 18px;
-line-height: 24px;
+font-size: 62px;
+line-height: 62px;
 color: #030712;
+margin: 42px 0;
+}
+
+.info-item{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 0;
+}
+.info-item-icon{
+    width: 80px;
+    height: 80px;
+}
+
+.info-item-details h3{
+
+   font-family: 'Inter';
+   font-style: normal;
+   font-weight: 800;
+   font-size: 14px;
+   line-height: 14px;
+   color: #030712;
+   margin: 0 0 14px 0;
+   text-transform: uppercase;
+}
+
+.info-item-details p{
+   font-family: 'Inter';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 24px;
+   text-align: justify;
+   color: #4C5564;
+   margin: 0;
+}
+.social-icon{
+    width: 80px;
+    height: 80px;
+    background-color: #D9D9D9;
+    padding: 14px;
+    box-sizing: border-box;
+    border-radius: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* --------------------------------------------------------------------------------------------- */
+
+/* Footer Section */
+footer{
+    width: 100%;
+    padding: 100px 0;
+    min-height: 60px;
+    background-color: #030712;
+    margin-top: 80px;
+}
+.footer-section{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.footer-section div{
+    width: 33.33%;
+    text-align: left;
+}
+.footer-section div img{
+    margin-left: -10px;
+}
+.footer-contact h3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #4C5564;
+    margin: 0 0 20px 0;
+}
+
+.footer-contact p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #AEB2BA;
+    margin: 0;
+}
+.footer-social{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+.footer-social ul{
+    list-style-type: none;
+}
+
+.footer-social ul li{
+    float: left;
+    margin-left: 28px;
 }

@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - My Brand Shema</title>
     <link rel="shortcut icon" href="images/logo-white.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <!-- HEADER SECTION -->
-    <div class="header-container">
+    <div class="header-container header-pc">
         <img src="images/logo.svg" width="50px" height="50px">
 
         <ul>
@@ -32,7 +34,45 @@
             </li>
         </ul>
 
-        <a class="header-btn" href="signin.html">Sign In &nbsp;&nbsp;&nbsp;<img src="images/arrow-right.svg" width="16px"></a>
+        <a class="header-btn" href="signin.html">Sign In&nbsp;&nbsp;&nbsp;<img src="images/arrow-right.svg" width="16px"></a>
+    </div>
+
+    <div class="header-mobile header-container">
+        <div class="header-left">
+            <img src="images/logo.svg" width="50px" height="50px">
+        </div>
+        <div class="header-right">
+            <button id="menu-trigger" type="button" onclick="showMenu();">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z" fill="#ffffff"/>
+                </svg>
+            </button>
+            <button id="menu-close" type="button" onclick="closeMenu();">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 12L7 7M12 12L17 17M12 12L17 7M12 12L7 17" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-menu-wrapper">
+            <ul>
+                <li>
+                    <a href="index.html" class="menu-link">Home</a>
+                </li>
+                <li>
+                    <a href="about.html" class="menu-link">About Me</a>
+                </li>
+                <li>
+                    <a href="portfolio.html" class="menu-link">Portfolio</a>
+                </li>
+                <li>
+                    <a href="blog.html" class="menu-link active">Blog</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="menu-link">Contact Me</a>
+                </li>
+            </ul>
+            <a class="header-btn" href="signin.html">Sign In&nbsp;&nbsp;&nbsp;<img src="images/arrow-right.svg" width="16px"></a>
+        </div>
     </div>
 
 
@@ -46,7 +86,7 @@
     <div class="content-section">
 
         <div class="blog-left-side">
-            <form>
+            <form class="pc-search">
                 <input class="form-input" type="text" name="name" id="" placeholder="Search Here ..." required>
             </form>
 
@@ -69,40 +109,45 @@
         </div>
 
         <div class="blog-section">
+            <div class="mobile-search-section">
+                <form>
+                    <input class="form-input" type="text" name="name" id="" placeholder="Search Here ..." required>
+                </form>
+            </div>
             
             <div class="blog-card">
                 <img class="blog-card-img" src="images/featuredhero.jpg">
                 <h3 class="blog-card-title">How to Design the Ideal Hero Image for Your Online Portfolio</h3>
-                <a href="#" class="blog-card-link">Read More <img src="images/solar_arrow-left-outline.svg" width="28px" height="28px"></a>
+                <a href="#" class="blog-card-link">Read More <img src="images/arrow-right.svg" width="18px" height="18px"></a>
             </div>
 
             <div class="blog-card">
                 <img class="blog-card-img" src="images/designtools.jpg">
                 <h3 class="blog-card-title">8 Design Tips to Make Your Blog or Shop Stand Out</h3>
-                <a href="#" class="blog-card-link">Read More <img src="images/solar_arrow-left-outline.svg" width="28px" height="28px"></a>
+                <a href="#" class="blog-card-link">Read More <img src="images/arrow-right.svg" width="18px" height="18px"></a>
             </div>
 
             <div class="blog-card">
                 <img class="blog-card-img" src="images/codetipi_featured.jpg">
                 <h3 class="blog-card-title">10+ Best Tools & Resources for Web Designers in 2024</h3>
-                <a href="#" class="blog-card-link">Read More <img src="images/solar_arrow-left-outline.svg" width="28px" height="28px"></a>
+                <a href="#" class="blog-card-link">Read More <img src="images/arrow-right.svg" width="18px" height="18px"></a>
             </div>
             <div class="blog-card">
                 <img class="blog-card-img" src="images/vpsheader-hp.jpg">
                 <h3 class="blog-card-title">Best Web Hosting Providers 2024: Top 10 Hosts you should choose today</h3>
-                <a href="#" class="blog-card-link">Read More <img src="images/solar_arrow-left-outline.svg" width="28px" height="28px"></a>
+                <a href="#" class="blog-card-link">Read More <img src="images/arrow-right.svg" width="18px" height="18px"></a>
             </div>
 
             <div class="blog-card">
                 <img class="blog-card-img" src="images/ssl.png">
                 <h3 class="blog-card-title">The Importance of SSL Certificates to Search Engines in 2024</h3>
-                <a href="#" class="blog-card-link">Read More <img src="images/solar_arrow-left-outline.svg" width="28px" height="28px"></a>
+                <a href="#" class="blog-card-link">Read More <img src="images/arrow-right.svg" width="18px" height="18px"></a>
             </div>
 
             <div class="blog-card">
                 <img class="blog-card-img" src="images/CN-Blog-Post-The-Best.jpg">
                 <h3 class="blog-card-title">Top 10 Most Popular JavaScript Frameworks to learn for Potetial Job</h3>
-                <a href="#" class="blog-card-link">Read More <img src="images/solar_arrow-left-outline.svg" width="28px" height="28px"></a>
+                <a href="#" class="blog-card-link">Read More <img src="images/arrow-right.svg" width="18px" height="18px"></a>
             </div>
 
             <button class="load-more-btn" type="button">Load More</button>
@@ -133,17 +178,33 @@
             <div class="footer-social">
                 <ul>
                     <li>
-                        <img src="images/linkedin icon-light.png" width="28px" height="28px">
+                        <img src="images/linkedin icon-light.png" width="18px" height="18px">
                     </li>
                     <li>
-                        <img src="images/mdi_github-light.png" width="28px" height="28px">
+                        <img src="images/mdi_github-light.png" width="18px" height="18px">
                     </li>
                     <li>
-                        <img src="images/instagram-icon-light.png" width="28px" height="28px">
+                        <img src="images/instagram-icon-light.png" width="18px" height="18px">
                     </li>
                 </ul>
             </div> 
         </div>
     </footer>
+    <script>
+        const menuBtn = document.querySelector("#menu-trigger");
+        const menuClose = document.querySelector("#menu-close");
+        const menuWrapper = document.querySelector(".mobile-menu-wrapper");
+        function showMenu(){
+            menuWrapper.style.display = "block";
+            menuBtn.style.display = "none";
+            menuClose.style.display = "block";
+        }
+
+        function closeMenu(){
+            menuWrapper.style.display = "none";
+            menuBtn.style.display = "block";
+            menuClose.style.display = "none";
+        }
+    </script>
 </body>
 </html>

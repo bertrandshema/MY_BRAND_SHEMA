@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - My Brand Shema</title>
     <link rel="shortcut icon" href="images/logo-white.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <!-- HEADER SECTION -->
-    <div class="header-container">
+    <div class="header-container header-pc">
         <img src="images/logo.svg" width="50px" height="50px">
 
         <ul>
@@ -32,8 +34,48 @@
             </li>
         </ul>
 
-        <a class="header-btn" href="signin.html">Sign In &nbsp;&nbsp;&nbsp;<img src="images/arrow-right.svg" width="16px"></a>
+        <a class="header-btn" href="signin.html">Sign In&nbsp;&nbsp;&nbsp;<img src="images/arrow-right.svg" width="16px"></a>
     </div>
+
+    <div class="header-mobile header-container">
+        <div class="header-left">
+            <img src="images/logo.svg" width="50px" height="50px">
+        </div>
+        <div class="header-right">
+            <button id="menu-trigger" type="button" onclick="showMenu();">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z" fill="#ffffff"/>
+                </svg>
+            </button>
+            <button id="menu-close" type="button" onclick="closeMenu();">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 12L7 7M12 12L17 17M12 12L17 7M12 12L7 17" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-menu-wrapper">
+            <ul>
+                <li>
+                    <a href="index.html" class="menu-link">Home</a>
+                </li>
+                <li>
+                    <a href="about.html" class="menu-link">About Me</a>
+                </li>
+                <li>
+                    <a href="portfolio.html" class="menu-link active">Portfolio</a>
+                </li>
+                <li>
+                    <a href="blog.html" class="menu-link">Blog</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="menu-link">Contact Me</a>
+                </li>
+            </ul>
+            <a class="header-btn" href="signin.html">Sign In&nbsp;&nbsp;&nbsp;<img src="images/arrow-right.svg" width="16px"></a>
+        </div>
+    </div>
+
+
 
 
     <!-- HERO SECTION -->
@@ -50,37 +92,37 @@
             <div class="portfolio-card">
                 <img class="portfolio-card-img" src="images/newlife bible church Cover 0.jpg">
                 <h3 class="portfolio-card-title">New Life Bible Church Website Design</h3>
-                <a href="#" class="portfolio-card-link"> <img src="images/arrow-right.svg" width="24px"></a>
+                <a href="#" class="portfolio-card-link"> <img src="images/arrow-right-up.svg" width="16px"></a>
             </div>
 
             <div class="portfolio-card">
                 <img class="portfolio-card-img" src="images/workcerale 0.jpg">
                 <h3 class="portfolio-card-title">Workcerelate By Learnible Global Website Design</h3>
-                <a href="#" class="portfolio-card-link"> <img src="images/arrow-right.svg" width="24px"></a>
+                <a href="#" class="portfolio-card-link"> <img src="images/arrow-right-up.svg" width="16px"></a>
             </div>
             
             <div class="portfolio-card">
                 <img class="portfolio-card-img" src="images/Innova Cover.jpg">
                 <h3 class="portfolio-card-title">INNOVA Project by Planbpreneur Landing Page Design</h3>
-                <a href="#" class="portfolio-card-link"> <img src="images/arrow-right.svg" width="24px"></a>
+                <a href="#" class="portfolio-card-link"> <img src="images/arrow-right-up.svg" width="16px"></a>
             </div>
 
             <div class="portfolio-card">
                 <img class="portfolio-card-img" src="images/Lexicon Cover.jpg">
                 <h3 class="portfolio-card-title">LEXICON 2023 Conference Landing Page Design & Implementation</h3>
-                <a href="#" class="portfolio-card-link"> <img src="images/arrow-right.svg" width="24px"></a>
+                <a href="#" class="portfolio-card-link"> <img src="images/arrow-right-up.svg" width="16px"></a>
             </div>
 
             <div class="portfolio-card">
                 <img class="portfolio-card-img" src="images/Screenshot 2024-02-16 041852.png">
                 <h3 class="portfolio-card-title">The Africa Future of Work & Entrepreneurship Summit Website</h3>
-                <a href="#" class="portfolio-card-link"> <img src="images/arrow-right.svg" width="24px"></a>
+                <a href="#" class="portfolio-card-link"> <img src="images/arrow-right-up.svg" width="16px"></a>
             </div>
 
             <div class="portfolio-card">
                 <img class="portfolio-card-img" src="images/omalaconsulting.com portfolio cover.jpg">
                 <h3 class="portfolio-card-title">Omala Training Center Course Landing Page Design</h3>
-                <a href="#" class="portfolio-card-link"> <img src="images/arrow-right.svg" width="24px"></a>
+                <a href="#" class="portfolio-card-link"> <img src="images/arrow-right-up.svg" width="16px"></a>
             </div>
 
 
@@ -98,7 +140,7 @@
         <div class="before-footer-section">
             <h2>Got a project?</h2>
             <p>Let's work <span>together</span></p>
-            <a class="home-cta-btn" href="#">Get In touch now <img src="images/humbleicons_arrow-right-white.svg" width="24px" height="24px"></a>
+            <a class="home-cta-btn" href="#">Get In touch now <img src="images/humbleicons_arrow-right-white.svg" width="16px" height="16px"></a>
         </div>
     </div>
 
@@ -127,5 +169,21 @@
             </div> 
         </div>
     </footer>
+    <script>
+        const menuBtn = document.querySelector("#menu-trigger");
+        const menuClose = document.querySelector("#menu-close");
+        const menuWrapper = document.querySelector(".mobile-menu-wrapper");
+        function showMenu(){
+            menuWrapper.style.display = "block";
+            menuBtn.style.display = "none";
+            menuClose.style.display = "block";
+        }
+
+        function closeMenu(){
+            menuWrapper.style.display = "none";
+            menuBtn.style.display = "block";
+            menuClose.style.display = "none";
+        }
+    </script>
 </body>
 </html>

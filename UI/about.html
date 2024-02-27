@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - My Brand Shema</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet">
+    <title>About - My Brand Shema</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/logo-white.png" type="image/png">
 </head>
 <body>
 
     <!-- HEADER SECTION -->
-    <div class="header-container">
+    <div class="header-container header-pc">
         <img src="images/logo.svg" width="50px" height="50px">
 
         <ul>
@@ -32,7 +34,45 @@
             </li>
         </ul>
 
-        <a class="header-btn" href="signin.html">Sign In &nbsp;&nbsp;&nbsp;<img src="images/arrow-right.svg" width="16px"></a>
+        <a class="header-btn" href="signin.html">Sign In&nbsp;&nbsp;&nbsp;<img src="images/arrow-right.svg" width="16px"></a>
+    </div>
+
+    <div class="header-mobile header-container">
+        <div class="header-left">
+            <img src="images/logo.svg" width="50px" height="50px">
+        </div>
+        <div class="header-right">
+            <button id="menu-trigger" type="button" onclick="showMenu();">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z" fill="#ffffff"/>
+                </svg>
+            </button>
+            <button id="menu-close" type="button" onclick="closeMenu();">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 12L7 7M12 12L17 17M12 12L17 7M12 12L7 17" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-menu-wrapper">
+            <ul>
+                <li>
+                    <a href="index.html" class="menu-link">Home</a>
+                </li>
+                <li>
+                    <a href="about.html" class="menu-link active">About Me</a>
+                </li>
+                <li>
+                    <a href="portfolio.html" class="menu-link">Portfolio</a>
+                </li>
+                <li>
+                    <a href="blog.html" class="menu-link">Blog</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="menu-link">Contact Me</a>
+                </li>
+            </ul>
+            <a class="header-btn" href="signin.html">Sign In&nbsp;&nbsp;&nbsp;<img src="images/arrow-right.svg" width="16px"></a>
+        </div>
     </div>
 
 
@@ -52,13 +92,13 @@
         <div class="intro-section">
             <h2 class="section-title"> Bertrand Shema </h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper matti.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper matti. 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper matti. 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper matti. 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper matti. 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper matti. 
-                 Ut elit tellus, luctus nec ullamcorper matti ipsum dolor sit amet, consectetur adipiscing ipsum dolor sit amet, consectetur adipiscing
+                I've been working as a web developer for the past five years. During this time,
+                I've honed my skills in both front-end and back-end development, creating seamless web applications that enhance user experiences.
+            </p>
+            <p>
+                In my journey as a developer, I've had the opportunity to work on various projects, from building responsive websites to developing custom web applications.
+                My expertise lies in HTML, CSS, JavaScript, and various frameworks like React and Angular. I'm passionate about clean code, performance optimization,
+                and staying up-to-date with industry trends.
             </p>
         </div>
 
@@ -90,9 +130,9 @@
             </div>
 
             <div class="exp-item">
-                <img src="images/planbpreneur_logo.jpg" width="108px" height="108px">
+                <img src="images/ibtc.jpg" width="108px" height="108px">
                 <div class="exp-item-details">
-                    <p><span>Learnible Global</span> <span>2020 - 2022</span></p>
+                    <p><span>IBTC Film School</span> <span>2020 - 2022</span></p>
                     <h3>Wordpress Design and Developer</h3>
                 </div>
             </div>
@@ -214,5 +254,21 @@
             </div> 
         </div>
     </footer>
+    <script>
+        const menuBtn = document.querySelector("#menu-trigger");
+        const menuClose = document.querySelector("#menu-close");
+        const menuWrapper = document.querySelector(".mobile-menu-wrapper");
+        function showMenu(){
+            menuWrapper.style.display = "block";
+            menuBtn.style.display = "none";
+            menuClose.style.display = "block";
+        }
+
+        function closeMenu(){
+            menuWrapper.style.display = "none";
+            menuBtn.style.display = "block";
+            menuClose.style.display = "none";
+        }
+    </script>
 </body>
 </html>

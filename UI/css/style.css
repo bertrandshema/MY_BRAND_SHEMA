@@ -6,10 +6,10 @@ body{
 }
 .body{
     background-color: #ffffff;
-    padding: 0;
+    padding: 32px 0;
     max-height: 100vh;
-    width: 1440px;
-    margin: 0;
+    width: 100%;
+    
 }
 
 /* Signing page*/
@@ -18,24 +18,24 @@ body{
     left: 0;
     padding: 0;
     width: 500px;
-    height: 100vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    gap: 24px;
     margin: auto;
 }
 .form-container{
    width: 100%;
    background: rgba(230, 231, 235, 0.2);
    border-radius: 32px;
-   padding: 24px 54px 48px 54px;
+   padding: 24px 54px 24px 54px;
    box-sizing: border-box;
 
 }
 .form-container h1{
-    font-size: 42px;
+    font-size: 38px;
     line-height: 42px;
     font-weight: 600;
     text-align: center;
@@ -49,8 +49,23 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 28px;
+    gap: 20px;
     padding: 0;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.form-error{
+    font-size: 10px;
+    color: red;
+    font-family: 'Inter';
+    font-style: normal;
+    display: none;
+    margin: 0;
+    margin-top: 6px;
 }
 
 .form-container form input{
@@ -63,7 +78,7 @@ body{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 14px;
     color: #4C5564;
     padding: 14px 24px 14px 24px;
     outline: none;
@@ -73,33 +88,39 @@ body{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 14px;
     color: #4C5564;
 }
 
 .form-btn{
     width: 100%;
-    height: 55px;
     background: #030712;
     border: 2px solid #030712;
     border-radius: 32px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     color: #FFFFFF;
-    padding: 12px 24px 12px 24px;
+    padding: 8px 24px 8px 24px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 20px;
     text-align: center;
+    cursor: pointer;
 }
 .form-btn:hover{
     background: #ffffff;
     border: 2px solid #030712;
     color: #030712;
+}
+.form-btn svg{
+    stroke: #FFFFFF;
+}
+.form-btn:hover svg{
+    stroke: #030712;
 }
 .return-link{   
     font-family: 'Inter';
@@ -120,6 +141,25 @@ body{
     background: rgba(230, 231, 235, 0.2);
 }
 
+.signin-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+}
+.signin-footer p a{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    color: #4C5564;
+    text-decoration: none;
+}
+.signin-footer p a:hover{
+    text-decoration: underline;
+}
 /* --------------------------------------------------------------------------------------------- */
 
 /* Header */

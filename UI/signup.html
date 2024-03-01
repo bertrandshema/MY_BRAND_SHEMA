@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In - My Brand Shema</title>
+    <title>Register - My Brand Shema</title>
     <link rel="shortcut icon" href="images/logo-white.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +15,12 @@
     <div class="signin-container">
         <img src="images/logo.svg" width="80px" height="80px">
         <div class="form-container">
-            <h1>SIGN IN</h1>
+            <h1>Register Your Account</h1>
             <form id="form">
+                <div class="form-group">
+                    <input class="form-input" type="text" name="name" id="name" placeholder="Fullname *">
+                    <p class="form-error"></p>
+                </div>
                 <div class="form-group">
                     <input class="form-input" type="text" name="email" id="email" placeholder="Email *">
                     <p class="form-error"></p>
@@ -25,8 +29,12 @@
                     <input class="form-input" type="password" name="password" id="password" placeholder="Password *">
                     <p class="form-error"></p>
                 </div>
+                <div class="form-group">
+                    <input class="form-input" type="password" name="conformPassword" id="confirmPassword" placeholder=" Confirm Password *">
+                    <p class="form-error"></p>
+                </div>
                 <button class="form-btn" type="submit">
-                    SIGN IN
+                    SIGN UP
                     <svg width="21" height="16" viewBox="0 0 21 16" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.0844727 7.60968H19.5242M19.5242 7.60968L12.2343 14.0487M19.5242 7.60968L12.2343 1.17065" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -34,10 +42,7 @@
             </form>
             <div class="signin-footer">
                 <p>
-                    <a href="signup.html">New? Register here</a>
-                </p>
-                <p>
-                    <a href="#">Forgot Password?</a>
+                    <a href="signin.html">Have account? Log in here</a>
                 </p>
             </div>
         </div>

@@ -1,13 +1,13 @@
 const form = document.getElementById('form');
-const fullname = document.getElementById('name');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
-const confirmPassword = document.getElementById('confirmPassword');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
 
+
     validateInputs();
+
 });
 
 const setError = (element, message) => {
@@ -38,14 +38,6 @@ const isValidEmail = email => {
 const validateInputs = () => {
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
-    const nameValue = fullname.value.trim();
-    const confirmValue = confirmPassword.value.trim();
-    if(nameValue === '') {
-        setError(fullname, 'Fullname is required');
-    }
-    else {
-        setSuccess(fullname);
-    }
 
     if(emailValue === '') {
         setError(email, 'Email is required');
@@ -62,14 +54,5 @@ const validateInputs = () => {
     } else {
         setSuccess(password);
     }
-
-    if(confirmValue === '') {
-        setError(confirmPassword, 'Confirm your password please.');
-    } else if (passwordValue !== confirmValue ) {
-        setError(confirmPassword, 'Password does not match.')
-    } else {
-        setSuccess(confirmPassword);
-    }
-
 
 };

@@ -8,7 +8,7 @@ body{
     background-color: #ffffff;
     padding: 0;
     max-height: 100vh;
-    width: 1440px;
+    width: 100%;
     margin: 0;
 }
 
@@ -16,9 +16,9 @@ body{
 .signin-container{
     top: 0;
     left: 0;
-    padding: 0;
+    padding: 50px 0;
     width: 500px;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,12 +30,12 @@ body{
    width: 100%;
    background: rgba(230, 231, 235, 0.2);
    border-radius: 32px;
-   padding: 24px 54px 48px 54px;
+   padding: 24px 32px;
    box-sizing: border-box;
 
 }
 .form-container h1{
-    font-size: 42px;
+    font-size: 32px;
     line-height: 42px;
     font-weight: 600;
     text-align: center;
@@ -49,7 +49,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 28px;
+    gap: 20px;
     padding: 0;
 }
 
@@ -63,7 +63,7 @@ body{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     color: #4C5564;
     padding: 14px 24px 14px 24px;
     outline: none;
@@ -73,7 +73,7 @@ body{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     color: #4C5564;
 }
 
@@ -88,18 +88,25 @@ body{
     font-weight: 600;
     font-size: 20px;
     color: #FFFFFF;
-    padding: 12px 24px 12px 24px;
+    padding: 10px 24px 10px 24px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 20px;
     text-align: center;
+    cursor: pointer;
 }
 .form-btn:hover{
     background: #ffffff;
     border: 2px solid #030712;
     color: #030712;
+}
+.form-btn svg{
+    stroke: #FFFFFF;
+}
+.form-btn:hover svg{
+    stroke: #030712;
 }
 .return-link{   
     font-family: 'Inter';
@@ -119,7 +126,49 @@ body{
 .return-link:hover{
     background: rgba(230, 231, 235, 0.2);
 }
+.signin-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.signin-footer p{
+    margin: 0;
+}
+.signin-footer p a{
+    color: #4C5564;
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+}
 
+.signin-footer p a:hover{
+    color: #030712;
+    text-decoration: underline
+}
+
+.form-group{
+    width: 100%;
+    display: column;
+}
+.form-error{
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: crimson;
+    margin: 8px 0 0 0;
+}
+.input-error{
+    border: 1px solid crimson;
+}
+.input-success{
+    border: 1px solid green;
+}
 /* --------------------------------------------------------------------------------------------- */
 
 /* Header */

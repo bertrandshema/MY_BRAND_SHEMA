@@ -41,7 +41,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="blog.html" class="menu-link active">
+                    <a href="article.html" class="menu-link active">
                         <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_205_38)">
                             <path d="M11.2 0C10.3513 0 9.53737 0.337142 8.93726 0.937258C8.33714 1.53737 8 2.35131 8 3.2H22.4C23.2487 3.2 24.0626 3.53714 24.6627 4.13726C25.2629 4.73737 25.6 5.55131 25.6 6.4V25.6C26.4487 25.6 27.2626 25.2629 27.8627 24.6627C28.4629 24.0626 28.8 23.2487 28.8 22.4V3.2C28.8 2.35131 28.4629 1.53737 27.8627 0.937258C27.2626 0.337142 26.4487 0 25.6 0L11.2 0Z" fill="white"/>
@@ -115,14 +115,14 @@
 
         <div class="content-container">
             <h2>Add new article</h2>
-            <form>
+            <form id="blogForm">
                 <div class="form-group wide">
                     <label for="fullName">Article Title *</label>
-                    <input class="form-input" type="text" name="name" id="fullName" placeholder="Enter the title of the project..." required>
+                    <input class="form-input" type="text" name="name" id="blogTitle" placeholder="Enter the title of the project...">
                 </div>
                 <div class="form-group wide">
                     <label for="category">Category</label>
-                    <select class="form-input" id="category">
+                    <select class="form-input" id="blogCategory">
                         <option value="Coding">Coding</option>
                         <option value="Design">Design</option>
                         <option value="SEO Security">SEO & Security</option>
@@ -130,17 +130,13 @@
                 </div>
                 <div class="form-group wide">
                     <label for="category">Content</label>
-                    <textarea class="form-input" rows="16">Content Goes here...</textarea>
+                    <textarea class="form-input" rows="16" id="blogContent">Content Goes here...</textarea>
                 </div>
                 <div class="form-group medium">
                     <label for="profileImage">Upload Cover Image*</label>
-                    <input class="form-input" type="file" name="profile" id="profileImage">
+                    <input class="form-input" type="file" name="blogCover" id="blogCover" accept="image/*">
                 </div>
 
-                <div class="form-group medium">
-                    <label for="profileImage">Upload Cover Image*</label>
-                    <input class="form-input" type="file" name="profile" id="profileImage">
-                </div>
 
                 <button class="form-btn" type="submit">
                     Submit
@@ -162,6 +158,8 @@
         const menuBtn = document.querySelector("#menu-trigger");
         const menuClose = document.querySelector("#menu-close");
         const sidebar = document.querySelector("#sidebar");
+
+
         function showMenu(){
             sidebar.style.display = "block";
             menuBtn.style.display = "none";
@@ -173,6 +171,66 @@
             menuBtn.style.display = "block";
             menuClose.style.display = "none";
         }
+        
+
+
+
+document.getElementById("blogForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    const title = document.getElementById("blogTitle");
+    const category = document.getElementById("blogCategory");
+    const content = document.getElementById("blogContent");
+    const cover = document.getElementById("blogCover").files[0]; // Get the file object
+
+    // Check if a cover image is selected
+    if (!cover) {
+        alert("Please select a cover image");
+        return;
+    }
+
+        //Validate Input
+        const validateInputs = () => {
+            if((title.value == "") || (category.value == "") || (content.value == "")){
+               alert("Fill all Inputs Please");
+               return;
+            }
+        };
+
+    const reader = new FileReader();
+
+    // Read the file as Data URL
+    reader.readAsDataURL(cover);
+
+    // When reader is loaded, store image and form data in local storage
+    reader.onload = function() {
+        const imageData = reader.result;
+
+        // Form data object
+        const formData = {
+            title: title.value.trim(),
+            content: content.value.trim(),
+            category: category.value.trim(),
+            cover: imageData // Store image data
+        };
+        
+        //Look for existing data in LocalStorage
+        let existingData = JSON.parse(localStorage.getItem('blogs')) || [];
+
+        //Add new date to existing one
+        existingData.push(formData);
+
+        // Store all data in local storage
+        localStorage.setItem("blogs", JSON.stringify(existingData));
+
+        // Optionally, you can redirect to another page or perform other actions
+        alert("Form data saved to local storage");
+
+        // Reset the form
+        document.getElementById("blogForm").reset();
+    };
+});
+
     </script>
 </body>
 </html>

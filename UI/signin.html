@@ -9,17 +9,37 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="admin/js/validation2.js"></script>
 </head>
 <body class="body">
     <div class="signin-container">
         <img src="images/logo.svg" width="80px" height="80px">
         <div class="form-container">
             <h1>SIGN IN</h1>
-            <form>
-                <input class="form-input" type="text" name="email" id="" placeholder="Email *" required>
-                <input class="form-input" type="password" name="password" id="" placeholder="Password *" required>
-                <button class="form-btn" type="submit">SIGN IN <img src="images/humbleicons_arrow-right-white.svg" width="30px" height="30px"></button>
+            <form id="form" action="/">
+                <div class="form-group">
+                    <input class="form-input" type="text" name="email" id="email" placeholder="Email *">
+                    <p class="form-error"></p>
+                </div>
+                <div class="form-group">
+                    <input class="form-input" type="password" name="password" id="password" placeholder="Password *">
+                    <p class="form-error"></p>
+                </div>
+                <button class="form-btn" type="submit">
+                    SIGN IN
+                    <svg width="21" height="16" viewBox="0 0 21 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.0844727 7.60968H19.5242M19.5242 7.60968L12.2343 14.0487M19.5242 7.60968L12.2343 1.17065" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </form>
+            <div class="signin-footer">
+                <p>
+                    <a href="signup.html">Have account? Log in here</a>
+                </p>
+                <p>
+                    <a href="#">Forgot password?</a>
+                </p>
+            </div>
         </div>
         <a href="index.html" class="return-link"><img src="images/solar_arrow-left-outline.svg" width="30px" height="30px"> Return to Homepage</a>
     </div>

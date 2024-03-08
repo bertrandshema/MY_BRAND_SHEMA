@@ -328,10 +328,79 @@ form{
 .content-table .table-header td{
     border: 4px solid #030712;
 }
-.table-img img{
+.blog-image{
     border-radius: 8px;
     object-fit: cover;
+    width: 80px;
+    height: 63px;
 }
+
+/* Modal Styles*/
+.modal{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: red;
+    border-radius: 24px;
+    margin: auto;
+}
+.modal-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px 0;
+    background-color: aqua;
+    flex-wrap: wrap;
+}
+.fullwidth{
+    width: 100%;
+}
+.admin-btn{
+    border-radius: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    outline: none;
+    border: none;
+}
+.btn-default{
+    background-color: #5CB5FD;
+}
+.btn-default:hover{
+    background-color: hsl(210, 70%, 50%);
+}
+.btn-danger{
+    background-color: crimson
+}
+.btn-danger:hover{
+    background-color: hsl(348, 70%, 40%);
+}
+.btn-success{
+    background-color: #50c878;
+}
+.btn-success:hover{
+    background-color: #3e8e61;
+}
+
+/* ----------------------------------------------------------------- */
 @media (min-width: 768px) and (max-width: 991px) {
     h1{
         font-size: 40px;
